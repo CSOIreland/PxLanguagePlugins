@@ -534,7 +534,7 @@
 		"saved-queries": "Iarratais Sábháilte",
 		"scan-qr-code": "Déan an <b>Cód QR</b> a scanadh leis an <b>Aip Fhíordheimhnithe</b>",
 		"scheduled": "Sceidealta",
-		"schema": "Schema",
+		"#schema": "Schema",
 		"search": "Cuardaigh",
 		"search-classification": "Cuardaigh Aicme",
 		"search-classifications": "Cuardaigh Aicmithe",
