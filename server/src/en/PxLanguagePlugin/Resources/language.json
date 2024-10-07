@@ -217,7 +217,7 @@
       "response-reject": "The request for approval of type [b]{0}[/b] has been rejected by [url=mailto:{5}]{6} ({7})[/url] against the Table [b]{1}[/b] Version [b]{2}.{3}[/b].\n View this workflow at {4}.",
       "signoff-approve": "The request for sign-off of type [b]{0}[/b] has been approved by [url=mailto:{5}]{6} ({7})[/url] against the Table [b]{1}[/b] Version [b]{2}.{3}[/b].\n View this workflow at {4}.",
       "signoff-reject": "The request for sign-off of type [b]{0}[/b] has been rejected by [url=mailto:{5}]{6} ({7})[/url] against the Table [b]{1}[/b] Version [b]{2}.{3}[/b].\n View this workflow at {4}.",
-
+      "release-cancelled": "Pending release cancelled for {0} {1}.{2}",
 
 
       "header": {
@@ -246,7 +246,8 @@
       "setup-1fa": "Setup access for {0}",
       "update-1fa": "Reset password for {0}",
       "update-2fa": "Reset 2FA for {0}",
-      "setup-2fa": "Setup 2FA for {0}"
+      "setup-2fa": "Setup 2FA for {0}",
+      "release-cancelled" : "The scheduled release for {0} {1}.{2} due on {3} has been cancelled"
     },
     "subscription": {
       "notification-body": "This is a placeholder for the subscription notification body",
@@ -264,7 +265,8 @@
       "update-properties": "Update Properties",
       "auto-approve-comment": "Automatic Response",
       "autoSignoff-comment": "Automatic Signoff",
-      "auto-create-comment":"Workflow Request created automatically"
+      "auto-create-comment":"Workflow Request created automatically",
+      "cancel-pending-live": "Pending release cancelled"
     },
     "reason": "You received this email because you are part of this Workflow."
   },
