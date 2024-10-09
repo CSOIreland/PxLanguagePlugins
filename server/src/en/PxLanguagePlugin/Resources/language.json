@@ -247,7 +247,7 @@
       "update-1fa": "Reset password for {0}",
       "update-2fa": "Reset 2FA for {0}",
       "setup-2fa": "Setup 2FA for {0}",
-      "release-cancelled" : "The scheduled release for {0} {1}.{2} due on {3} has been cancelled"
+      "release-cancelled" : "The scheduled release for {0} {1}.{2} has been cancelled"
     },
     "subscription": {
       "notification-body": "This is a placeholder for the subscription notification body",
@@ -267,7 +267,7 @@
       "autoSignoff-comment": "Automatic Signoff",
       "auto-create-comment":"Workflow Request created automatically",
       "cancel-pending-live": "Pending release cancelled",
-      "cancel-pending-live-comment": "Pending live release for {0} was cancelled by {1} at time {2}. "
+      "cancel-pending-live-comment": "Pending live release was cancelled by {1}. "
     },
     "reason": "You received this email because you are part of this Workflow."
   },
