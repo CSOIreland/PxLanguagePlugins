@@ -267,7 +267,7 @@
       "autoSignoff-comment": "Automatic Signoff",
       "auto-create-comment":"Workflow Request created automatically",
       "cancel-pending-live": "Pending release cancelled",
-      "cancel-pending-live-comment": "Pending live release was cancelled by {1}. "
+      "cancel-pending-live-comment": "Pending live release was cancelled by {0}. "
     },
     "reason": "You received this email because you are part of this Workflow."
   },
