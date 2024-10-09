@@ -256,7 +256,7 @@
       "autoSignoff-comment": "Síniú Uathoibríoch",
       "auto-create-comment":"Iarratas Sreafa Oibre cruthaithe go huathoibríoch",
       "cancel-pending-live": "Tá scaoileadh curtha ar ceal",
-      "cancel-pending-live-comment": "Bhí an scaoileadh beo seo curtha ar ceal le {0}."
+      "cancel-pending-live-comment": "Bhí an scaoileadh beo seo curtha ar ceal ag {0}."
     },
     "reason": "Fuair ​​tú an ríomhphost seo toisc go bhfuil tú mar chuid den Shreabhadh Oibre seo."
   },
