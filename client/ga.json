@@ -1002,9 +1002,13 @@
 		}
 	},
 	"quickLinks": {
-		"placeholder": {
-			"text": "",
-			"url": ""
+		"csoMainWebsite": {
+			"text": "CSO Main Website",
+			"url": "https://www.cso.ie/en/baile/"
+		},
+		"csoVisualWebsite": {
+			"text": "CSO Visual Website",
+			"url": "https://visual.cso.ie/"
 		}
 	}
 }
