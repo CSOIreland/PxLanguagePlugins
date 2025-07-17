@@ -565,6 +565,7 @@
 		"select-all": "Roghnaigh an t-Iomlán",
 		"select-existing-table": "Roghnaigh Tábla Reatha",
 		"select-new-existing-table": "Tá tú ar tí tábla eile a roghnú agus caillfear aon athruithe. <br>An bhfuil tú cinnte gur mhaith leat leanúint ar aghaidh?",
+		"#select-row-column": "Please select at least one row field and one column field",
 		"select-uppercase": "ROGHNAIGH",
 		"send-e-mail": "Cuir Ríomhphost",
 		"search-for-synonyms": "Cuardaigh Acrainmneacha",

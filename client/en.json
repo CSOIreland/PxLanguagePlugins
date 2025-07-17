@@ -567,6 +567,7 @@
 		"select-all": "Select All",
 		"select-existing-table": "Select Existing Table",
 		"select-new-existing-table": "You are about to select a different table and any changes will be lost. <br>Are you sure you want to continue?",
+		"select-row-column": "Please select at least one row field and one column field",
 		"select-uppercase": "SELECT",
 		"send-e-mail": "Send E-mail",
 		"send-notification": "Send Notification",
