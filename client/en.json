@@ -164,6 +164,7 @@
 		"confirm-password": "Confirm Password",
 		"confirm-reload-config": "All configuration files will be re-loaded and the application will be restarted.",
 		"confirm-remove-subset": "You are about to remove the subset. <br><br><b>Confirm</b> to continue or <b>Cancel</b>.",
+		"confirm-send-email-to-all": "You are about to send this email to all groups. <br><br><b>Confirm</b> to continue or <b>Cancel</b>.",
 		"contact": "Contact",
 		"contact-us": "Contact us",
 		"contact-email": "Contact Email",

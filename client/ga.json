@@ -163,6 +163,7 @@
 		"confirm-password": "Deimhnigh Pasfhocal",
 		"confirm-reload-config": "Déanfar gach comhad cumraíochta a athlódáil agus an feidhmchlár a atosú.",
 		"confirm-remove-subset": "Tá tú ar tí an fothacar a bhaint. <br><br><b>Deimhnigh</b> leanúint ar aghaidh nó <b>Cealaigh</b>.",
+		"#confirm-send-email-to-all": "You are about to send this email to all groups. <br><br><b>Confirm</b> to continue or <b>Cancel</b>.",
 		"contact": "Teagmháil",
 		"contact-us": "Déan teagmháil linn",
 		"contact-email": "Ríomhphost Teagmhála",
