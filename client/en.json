@@ -556,7 +556,7 @@
 		"save": "Save",
 		"save-query": "Save Query",
 		"saved-queries": "Saved Queries",
-		"scan-qr-code": "Scan the <b>QR Code</b> with the <b>Authenticator App</b>",
+		"scan-qr-code": "Scan the <b>QR Code</b> with the <b>Authenticator App</b> or manually enter the code.",
 		"scheduled": "Scheduled",
 		"schema": "Schema",
 		"search": "Search",
