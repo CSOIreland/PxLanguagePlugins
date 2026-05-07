@@ -1009,13 +1009,17 @@
 		}
 	},
 	"quickLinks": {
-		"csoMainWebsite": {
+		"cso-main-website": {
 			"text": "CSO Main Website",
 			"url": "https://www.cso.ie/"
 		},
-		"csoVisualWebsite": {
-			"text": "CSO Visual Website",
+		"cso-interactive-data-visualisation-apps": {
+			"text": "CSO Interactive Data Visualisation Apps",
 			"url": "https://visual.cso.ie/"
+		},
+		"pxstat-user-guide": {
+			"text": "PxStat User Guide",
+			"url": "https://www.cso.ie/en/databases/userguides/pxstatuserguide/"
 		}
 	}
 }

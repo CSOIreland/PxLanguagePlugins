@@ -176,7 +176,7 @@
 		"copy-to-clipboard": "Cóipeáil go dtí an Gearrthaisce",
 		"copyright": "Cóipcheart",
 		"copyrights": "Cóipchirt",
-		"copyright-data-re-use": "Beartas Cóipchirt agus Athúsáide",
+		"copyright-data-re-use": "Cóipcheart agus Athúsáid Sonraí",
 		"correlation-id": "Aitheantas comhghaoil",
 		"create": "Cruthaigh",
 		"created-by": "Cruthaithe ag",
@@ -1007,13 +1007,17 @@
 		}
 	},
 	"quickLinks": {
-		"csoMainWebsite": {
-			"text": "CSO Main Website",
+		"cso-main-website": {
+			"text": "Príomhshuíomh Gréasáin CSO",
 			"url": "https://www.cso.ie/en/baile/"
 		},
-		"csoVisualWebsite": {
-			"text": "CSO Visual Website",
+		"cso-interactive-data-visualisation-apps": {
+			"text": "Léirshamhluithe Idirghníomhacha CSO",
 			"url": "https://visual.cso.ie/"
+		},
+		"pxstat-user-guide": {
+			"text": "Treoir d’Úsáideoirí PxStat",
+			"url": "https://www.cso.ie/en/databases/userguides/pxstatuserguide/"
 		}
 	}
 }
