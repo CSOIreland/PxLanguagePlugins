@@ -196,6 +196,7 @@
 		"csv": "CSV",
 		"csv-no-data": "Níl aon sonraí sa chomhad CSV.",
 		"#csv-widget-table": "CSV widget table.",
+		"#csv-widget-table-description": "Create a widget table from a CSV file.",
 		"current": "Reatha",
 		"current-password": "Pasfhocal reatha",
 		"curved-line": "Líne chuartha",

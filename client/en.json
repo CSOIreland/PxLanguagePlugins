@@ -197,6 +197,7 @@
 		"csv": "CSV",
 		"csv-no-data": "CSV files contains no data.",
 		"csv-widget-table": "CSV Widget Table",
+		"csv-widget-table-description": "Create a widget table from a CSV file.",
 		"current": "Current",
 		"current-password": "Current password",
 		"curved-line": "Curved line",
