@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 
 namespace UnitTestEnPlugin
 {
@@ -57,9 +58,9 @@ namespace UnitTestEnPlugin
         public void SanitizeBasicNoSanitize()
         {
             string translation;
-            using (WebClient wc = new())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language elp = new Language (translation);
             string testWordInput = "this is a test";
@@ -83,9 +84,9 @@ namespace UnitTestEnPlugin
         public void SanitizeBasicRemoveCurlyBraces()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language elp = new Language(translation);
             string testWordInput = "this is{a}test";
@@ -97,9 +98,9 @@ namespace UnitTestEnPlugin
         public void SanitizeBasicRemoveHtmlStuff()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language elp = new Language(translation);
             string testWordInput = "this is<a>test";
@@ -111,9 +112,9 @@ namespace UnitTestEnPlugin
         public void SingularizeBasic()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language elp = new Language(translation);
             string testWordInput = "dogs";
@@ -125,9 +126,9 @@ namespace UnitTestEnPlugin
         public void SingularizeLessBasic()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language elp = new Language(translation);
             string testWordInput = "children";
@@ -139,9 +140,9 @@ namespace UnitTestEnPlugin
         public void SingularizeNotFound()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language elp = new Language(translation);
             string testWordInput = "xxxx";
@@ -153,9 +154,9 @@ namespace UnitTestEnPlugin
         public void GetLabelsBasic()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language elp = new Language(translation);
             var result = elp.GetLabelValues();
@@ -166,9 +167,9 @@ namespace UnitTestEnPlugin
         public void SynonymBasic()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language elp = new Language(translation);
             var result = elp.GetSynonyms ("car");
@@ -179,9 +180,9 @@ namespace UnitTestEnPlugin
         public void SynonymNotFound()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language elp = new Language(translation);
             var result = elp.GetSynonyms("carxxx");
@@ -192,9 +193,9 @@ namespace UnitTestEnPlugin
         public void ExcludedTerms()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language elp = new Language(translation);
             var result = elp.GetExcludedTerms();
@@ -206,9 +207,9 @@ namespace UnitTestEnPlugin
         public void DoNotAmend()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language elp = new Language(translation);
             var result = elp.GetDoNotAmend();

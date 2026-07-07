@@ -4,6 +4,7 @@ using System.Linq;
 using System;
 using PxLanguagePlugin.ga;
 using System.Net;
+using System.Net.Http;
 
 namespace TestGaPlugin
 {
@@ -31,9 +32,9 @@ namespace TestGaPlugin
         public void TestGetLabelValuesBasic()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language elp = new Language(translation);
             Language glp = new Language(translation);
@@ -46,9 +47,9 @@ namespace TestGaPlugin
         public void SanitizeBasicNoSanitize()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language glp = new Language(translation);
             string testWordInput = "Is teist é seo";
@@ -60,9 +61,9 @@ namespace TestGaPlugin
         public void SanitizeBasicRemoveCurlyBraces()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language glp = new Language(translation);
             string testWordInput = "Is teist {é} seo";
@@ -74,9 +75,9 @@ namespace TestGaPlugin
         public void SanitizeBasicRemoveHtmlStuff()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language glp = new Language();
             string testWordInput = "Is teist <é> seo";
@@ -88,9 +89,9 @@ namespace TestGaPlugin
         public void SingularizeBasic()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language glp = new Language(translation);
             string testWordInput = "tithe";
@@ -102,9 +103,9 @@ namespace TestGaPlugin
         public void SingularizeLenition()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language glp = new Language(translation);
             string testWordInput = "dteach";
@@ -116,9 +117,9 @@ namespace TestGaPlugin
         public void SingularizeAspiration()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language glp = new Language(translation);
             string testWordInput = "theach";
@@ -130,9 +131,9 @@ namespace TestGaPlugin
         public void SingularizeIrregular()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language glp = new Language(translation);
             string testWordInput = "mná";
@@ -144,9 +145,9 @@ namespace TestGaPlugin
         public void SingularizeNotFound()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language glp = new Language(translation);
             string testWordInput = "xxxx";
@@ -158,9 +159,9 @@ namespace TestGaPlugin
         public void GetLabelsBasic()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language glp = new Language(translation);
             var result = glp.GetLabelValues();
@@ -171,9 +172,9 @@ namespace TestGaPlugin
         public void SynonymBasic()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language glp = new Language(translation);
             var result = glp.GetSynonyms("sochaí");
@@ -184,9 +185,9 @@ namespace TestGaPlugin
         public void SynonymNotFound()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language glp = new Language(translation);
             var result = glp.GetSynonyms("xxxxx");
@@ -197,9 +198,9 @@ namespace TestGaPlugin
         public void ExcludedTerms()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language glp = new Language(translation);
             var result = glp.GetExcludedTerms();
@@ -210,9 +211,9 @@ namespace TestGaPlugin
         public void DoNotAmend()
         {
             string translation;
-            using (WebClient wc = new WebClient())
+            using (HttpClient client = new HttpClient())
             {
-                translation = wc.DownloadString("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json");
+                translation = client.GetStringAsync("https://cdn.jsdelivr.net/gh/CSOIreland/PxLanguagePlugins@2.2.0/server/src/en/PxLanguagePlugin/Resources/language.json").Result;
             }
             Language glp = new Language(translation);
             var result = glp.GetDoNotAmend();
